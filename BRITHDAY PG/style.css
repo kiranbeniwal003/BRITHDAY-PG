@@ -1,0 +1,81 @@
+@import url(font\ style.zip);
+@import url(wedding_ring_bling.zip);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to top right, #ffd4ff, #fad0c4);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  background-color: lightcoral;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 400px;
+}
+
+h1 {
+  color: white;
+  font-size: 2.5em;
+}
+
+.message {
+  font-size: 1.2em;
+  color: black;
+  margin: 20px 0;
+}
+
+.name {
+  font-style: italic;
+  color: black;
+}
+
+.balloons {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+.balloon {
+  width: 30px;
+  height: 40px;
+  border-radius: 50% 50% 45% 45%;
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+
+.balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background-color: #555;
+  transform: translateX(-50%);
+}
+
+.red { background-color: #ff4d4d; }
+.blue { background-color: #4da6ff; }
+.green { background-color: #66cc66; }
+.yellow { background-color: #ffff66; }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
